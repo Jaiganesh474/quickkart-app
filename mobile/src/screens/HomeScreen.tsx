@@ -199,7 +199,7 @@ export default function HomeScreen() {
             </ScrollView>
           ) : (
             <Image 
-              source={require('../../assets/images/flash_sale_banner.png')} 
+              source={require('../../assets/images/flash_sale_banner.jpg')} 
               style={styles.bannerImage} 
               resizeMode="cover" 
             />

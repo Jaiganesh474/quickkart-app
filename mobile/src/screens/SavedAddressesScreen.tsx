@@ -93,7 +93,7 @@ export default function SavedAddressesScreen() {
               <WebMap onLocationSelected={handleMapPinSelected} centerPos={mapCenter} />
             ) : (
                <Image 
-                 source={require('../../assets/images/live_map_placeholder.png')} 
+                 source={require('../../assets/images/live_map_placeholder.jpg')} 
                  style={styles.mapImage}
                  resizeMode="cover"
                />
