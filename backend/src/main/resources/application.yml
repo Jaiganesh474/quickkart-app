@@ -1,0 +1,53 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: QuickKart
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/quickkart_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:123456}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  security:
+    user:
+      name: admin
+      password: adminpassword # Default basic auth until JWT is setup
+
+  mail:
+    host: smtp-relay.brevo.com
+    port: 587
+    username: ${BREVO_USERNAME:dummy_user}
+    password: ${BREVO_SMTP_KEY:dummy_key}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+quickkart:
+  mail:
+    sender: jaiganeshrio474@gmail.com
+
+razorpay:
+  key:
+    id: ${RAZORPAY_KEY_ID:dummy_key_id}
+    secret: ${RAZORPAY_KEY_SECRET:dummy_key_secret}
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: DEBUG
+    com.quickkart: DEBUG
