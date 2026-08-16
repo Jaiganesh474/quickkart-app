@@ -17,7 +17,12 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.leodas0074.mobile"
+      "package": "com.leodas0074.mobile",
+      "config": {
+        "googleMaps": {
+          "apiKey": "dummy_key_to_prevent_android_crash"
+        }
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
